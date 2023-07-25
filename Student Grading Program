@@ -1,0 +1,25 @@
+while True:
+    print("enter your choice.\n")
+    print("press 1 to calculate the grade of the students.\n")
+    print("press 2 to exit from the loop.\n")
+    x=int(input())
+    if x != 1:
+        break
+    try:
+        number=int(input("enter the number of the student:"))
+        if number < 0:
+            raise ValueError ( "Invalid Marks!!" )
+        elif number >= 90:
+            print("A+")
+        elif number >= 80:
+            print("A")
+        elif number >= 70:
+            print("B")
+        elif number >= 60:
+            print("C")
+        elif number >= 50:
+            print("D")
+        else:
+            print("Fail")
+    except ValueError as error:
+        print(error)
